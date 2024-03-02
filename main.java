@@ -1,18 +1,41 @@
+import model.Person;
 import model.Student;
+import model.Teacher;
 import services.StudentServices;
+import services.TeacherServices;
 
 import java.util.List;
 
 public class main {
      public static void main(String[] args) {
+          //   D:\Projects\SchoolSystem\DB\StudentDB.xlsx
           System.out.println("Helllo");
           StudentServices services = new StudentServices();
-          services.writeToExcelSheet();
-          //List<User> userList = servie.ReadDataFromExcel("D:/writeToExcelSheet/user.xlsx");
-          //System.out.println("userList........ "  +  userList);     }
+          TeacherServices services1=new TeacherServices();
+          //services1.writeToExcel();
+          //services.writeToExcelSheet();
+          List<Student> userList = services.readFromExcelStudent("D:\\Projects\\SchoolSystem\\DB\\StudentDB.xlsx");
+          List<Teacher> userList2 = services1.readFromExcelTeacher("D:\\Projects\\SchoolSystem\\DB\\TeacherDB.xlsx");
+          //services.readDataFromExcel("D:\\Projects\\SchoolSystem\\DB\\StudentDB.xlsx");
+//          for (int i=0;i<userList.size();i++)
+//          {
+//               System.out.println("name "+userList.get(i).getName());
+//               System.out.println("Courses  "+userList.get(i).getCourseNames());
+//               System.out.println("Grade  "+userList.get(i).getGrade());
+//               System.out.println("Est   "+userList.get(i).getEstimation());
+//          }
+          System.out.println("/////////////////////////////////////////////////////////////////////");
+          for (int i=0;i<userList2.size();i++)
+          {
+               System.out.println("name "+userList2.get(i).getName());
+               System.out.println("Courses  "+userList2.get(i).getCourseNames());
+               System.out.println("Grade  "+userList2.get(i).getGrads());
+               System.out.println("Est   "+userList2.get(i).getEmail());
+          }
+     }
 
      }
-}
+
 /**
  * وصف المشروع:
 تطوير نظام شامل لإدارة المدرسة يستخدم تقنيات Java المتقدمة. يهدف هذا النظام إلى توفير حل شامل لإدارة جميع جوانب العمل في المدرسة بشكل إلكتروني، مما يسهل على الإدارة والمعلمين والطلاب التفاعل والتواصل بشكل أفضل.

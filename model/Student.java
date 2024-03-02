@@ -3,28 +3,37 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 public class Student extends Person {
-    int Grade;
+    double Grade;
     char Estimation;
     Course course;
 
-    protected Student() {
+     public Student() {
     }
 
-    Student(String name, int Grade, char Estimation, Course course) {
+    public Student(String name,double Grade, char Estimation, Course course) {
         this.Name = name;
         this.Estimation = Estimation;
         this.course = course;
         this.Grade = Grade;
     }
     public List<String> getCourseNames() {
-        return course.getNames();
+        if (course != null) {
+            return course.getNames();
+        } else {
+            return null;
+        }
+    }
+    public void setCourseNames(List<String> courses) {
+        if (course != null) {
+            course.setNames(courses);
+        }
     }
 
-    public int getGrade() {
+    public double getGrade() {
         return Grade;
     }
 
-    public void setGrade(int grade) {
+    public void setGrade(double grade) {
         Grade = grade;
     }
 
