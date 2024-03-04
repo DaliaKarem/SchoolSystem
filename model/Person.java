@@ -3,9 +3,21 @@ package model;
 public class Person {
     String Name;
     int id;
-    int age;
+    double age;
     boolean isAbsent;
+    Person()
+    {
+
+    }
+    Person(String name,int id,double age,boolean isAbsent)
+    {
+        this.age=age;
+        this.id=id;
+        this.isAbsent=isAbsent;
+        this.Name=name;
+    }
     public String getName() {
+        System.out.println("NNNNNNNName  "+Name );
         return Name;
     }
     public void setName(String name) {
@@ -17,10 +29,10 @@ public class Person {
     public void setId(int id) {
         this.id = id;
     }
-    public int getAge() {
+    public double getAge() {
         return age;
     }
-    public void setAge(int age) {
+    public void setAge(double age) {
         this.age = age;
     }
     public boolean isAbsent() {
