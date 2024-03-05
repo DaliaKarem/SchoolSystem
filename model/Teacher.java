@@ -74,24 +74,4 @@ public Teacher(int ID, String name, double age, String Grade_Course, long phone,
     public void setPhone(long phone) {
         this.phone = phone;
     }
-//    public static List<Teacher> createTeacherData() {
-//        List<Teacher> users = new ArrayList<Teacher>();
-//        List<String> courseNames1 = new ArrayList<>();
-//        courseNames1.add("Course1");
-//        courseNames1.add("Course");
-//        List<Double> numbers = new ArrayList<>();
-//        numbers.add(1.0);
-//        numbers.add(2.0);
-//        numbers.add(3.0);
-//        users.add(new Teacher("Teacher1", 2, new Course(courseNames1),"Teacher1@gmail","125street" ));
-//        List<String> courseNames2 = new ArrayList<>();
-//        courseNames2.add("Course2");
-//        courseNames2.add("Course");
-//        users.add(new Teacher("Teacher2", 1, new Course(courseNames1),"Teacher2@gmail","125street" ));
-//        List<String> courseNames3 = new ArrayList<>();
-//        courseNames3.add("Course3");
-//        courseNames3.add("Course");
-//        users.add(new Teacher("Teacher3", 2, new Course(courseNames1),"Teacher3@gmail","125street" ));
-//        return users;
-//    }
 }

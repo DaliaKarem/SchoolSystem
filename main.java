@@ -42,6 +42,9 @@ public class main {
                                                break;
                                        case 2:
                                            teacherfunctions.editTeacherInfo();
+                                             break;
+                                       case 3:
+                                           teacherfunctions.searchTeacher();
                                         default:
                                              break;
                                    }

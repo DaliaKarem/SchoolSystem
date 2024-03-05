@@ -54,7 +54,6 @@ public abstract class Services {
         }
     }
     private void writeTeacherData(Row dataRow, Teacher teacher) {
-        System.out.println("ttttttttttttttt");
         dataRow.createCell(0).setCellValue(teacher.getId());
         dataRow.createCell(1).setCellValue(teacher.getName());
         dataRow.createCell(2).setCellValue(teacher.getAge());
@@ -63,7 +62,6 @@ public abstract class Services {
         dataRow.createCell(5).setCellValue(teacher.getEmail());
         dataRow.createCell(6).setCellValue(teacher.getAddress());
         dataRow.createCell(7).setCellValue(teacher.isAbsent());
-        System.out.println(" id "+teacher.getId()+ " name "+teacher.getName());
     }
 
     private void writeStudentData(Row dataRow, Student student) {

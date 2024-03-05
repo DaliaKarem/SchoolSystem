@@ -17,7 +17,6 @@ public class Person {
         this.Name=name;
     }
     public String getName() {
-        System.out.println("NNNNNNNName  "+Name );
         return Name;
     }
     public void setName(String name) {
