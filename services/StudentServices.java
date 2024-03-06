@@ -21,16 +21,14 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import static model.Student.createUserData;
-
 public class StudentServices extends Services {
 
 	Student student=new Student();
 
-	public void writeToExcelStudent(String path)
+	public void writeToExcelStudent(String path,List<Student>users)
 	{
-		String[] row_heading = {"Name","Grade","Estimation","Courses"};
-		List<Student> users =createUserData();
+		//id, name, grade, 'A', email_Parents, address, course, age, phone, true
+		String[] row_heading = {"ID","Name","Grade","Estimation","Parent's Email","Address","Courses","Age","Phone","isAbsent"};
 		writeToExcelSheet(row_heading, users, "Students Details ", path);
 	}
 

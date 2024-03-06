@@ -6,10 +6,6 @@ import java.util.List;
 public class Teacher extends Person {
     Course course;
     String Grads_Course;
-    String Email;
-    String Address;
-    long phone;
-    boolean isAbsent;
     public Teacher() {
     }
 
@@ -21,22 +17,7 @@ public class Teacher extends Person {
         this.course = course;
     }
 
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
-//ID,name,Age, grade_Course, Phone, email, address,Absent
+    //ID,name,Age, grade_Course, Phone, email, address,Absent
 public Teacher(int ID, String name, double age, String Grade_Course, long phone, String Email, String address,boolean isAbsent) {
     this.Grads_Course = Grade_Course;
     this.Address = address; // Assigning to this.address

@@ -1,13 +1,14 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
     private List<String> names;
-    private int grade;
-
     // Default constructor
     public Course() {
+        this.names = new ArrayList<>();
+
     }
 
     // Constructor with name and grade
@@ -24,11 +25,4 @@ public class Course {
         this.names = names;
     }
 
-    public int getGrade() {
-        return grade;
-    }
-
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
 }

@@ -13,19 +13,18 @@ import java.util.Scanner;
 
 public class main {
      public static void main(String[] args) {
-             Scanner input = new Scanner(System.in);
+               Scanner input = new Scanner(System.in);
                Admin admin = new Admin();
-               String Email, Pass, name, email, address, absent, GradeCourses;
-               int choice, id;
-               double age;
-               long phone;
+               Teacherfunctions teacherfunctions = new Teacherfunctions();
+               Studentfunctions studentfunctions=new Studentfunctions();
+               String Email, Pass;
+               int choice;
                System.out.println("--------------Welcome To School System-------------");
                System.out.println("Plz Enter Email And Password ");
                System.out.print("Email : ");
                Email = input.nextLine();
                System.out.print("Pass : ");
                Pass = input.nextLine();
-               Teacherfunctions teacherfunctions = new Teacherfunctions();
                if (admin.isAdmin("SchoolSystem@12", "123456")) {
                     while (true) {
                          System.out.println(" 1-Teachers\n 2-Students\n 3-Courses\n 4-Exit (Enter number)");
@@ -45,11 +44,27 @@ public class main {
                                              break;
                                        case 3:
                                            teacherfunctions.searchTeacher();
+                                           break;
                                         default:
                                              break;
                                    }
                                    break;
                               case 2: // Student
+                                  System.out.println("1-Add Student\n2-Edit Info\n3-Search about Student\n4-Absent Student in Day\n5-Reports ");
+                                  choice = input.nextInt();
+                                  input.nextLine(); // Consume newline character
+                                  switch (choice) {
+                                      case 1:
+                                          studentfunctions.addStudent();
+                                          break;
+                                      case 2:
+                                          studentfunctions.editStudentInfo();
+                                          break;
+                                      case 3:
+                                          studentfunctions.searchStudent();
+                                      default:
+                                          break;
+                                  }
                                    break;
                               case 3: // Courses
                                    break;

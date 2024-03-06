@@ -5,6 +5,10 @@ public class Person {
     int id;
     double age;
     boolean isAbsent;
+    String Email;
+    long phone;
+    String Address;
+
     Person()
     {
 
@@ -40,5 +44,28 @@ public class Person {
     public void setAbsent(boolean isAbsent) {
         this.isAbsent = isAbsent;
     };
-    
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(long phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
 }
